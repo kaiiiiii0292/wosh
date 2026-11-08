@@ -359,321 +359,6 @@
       line-height: 1;
     }
 
-    .review-stage {
-      position: relative;
-      margin: 26px auto 0;
-      width: min(730px, 100%);
-      perspective: 1200px;
-    }
-
-    .review-card {
-      position: relative;
-      width: 100%;
-      max-width: 690px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, #0b4aa8 0%, #0d3f96 100%);
-      border-radius: 30px;
-      border: 3px solid rgba(255,255,255,0.16);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.28), 0 0 40px rgba(30, 130, 255, 0.2);
-      padding: 32px 26px 30px;
-      overflow: hidden;
-      transform: rotateX(2deg);
-    }
-
-    .review-card::before {
-      content: "";
-      position: absolute;
-      inset: -12% 4% auto 4%;
-      height: 120%;
-      background: linear-gradient(110deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02), rgba(255,255,255,0.08));
-      transform: rotate(-4deg);
-      pointer-events: none;
-      filter: blur(2px);
-    }
-
-    .review-card::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 20px;
-      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.15));
-      pointer-events: none;
-    }
-
-    .stars {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 0 auto 16px;
-      font-size: clamp(28px, 4vw, 42px);
-      color: #f7d14a;
-      text-shadow: 0 2px 10px rgba(242, 194, 48, 0.4);
-      filter: drop-shadow(0 3px 0 rgba(163, 117, 0, 0.6));
-    }
-
-    .stars span { display: inline-block; }
-
-    .headline {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      font-weight: 800;
-      line-height: 0.96;
-      font-size: clamp(30px, 4vw, 58px);
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      color: #f7f4ee;
-      margin: 0 auto 18px;
-      max-width: 620px;
-      font-family: "Arial Black", Impact, sans-serif;
-    }
-
-    .google-box {
-      position: relative;
-      z-index: 1;
-      width: min(360px, 62%);
-      height: 210px;
-      margin: 8px auto 16px;
-      background: #f5f5f5;
-      border-radius: 46% 46% 24% 24% / 58% 58% 24% 24%;
-      box-shadow: inset 0 -10px 18px rgba(0,0,0,0.06), 0 18px 30px rgba(6,39,96,0.14);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .google-box::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 54px;
-      background: linear-gradient(180deg, rgba(79,204,255,0.7), rgba(0,150,255,0.8));
-      border-radius: 50% 50% 30% 30% / 80% 80% 20% 20%;
-      transform: translateY(18px);
-    }
-
-    .google-g {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 168px;
-      height: 168px;
-      transform: translate(-50%, -54%);
-      border-radius: 50%;
-      background: linear-gradient(180deg, #f5f5f5, #efefef);
-      box-shadow: inset 0 0 0 12px #f5f5f5;
-    }
-
-    .google-g::before,
-    .google-g::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-    }
-
-    .google-g::before {
-      background: conic-gradient(from 210deg, #4285F4 0 27%, #34A853 27% 56%, #FBBC05 56% 78%, #EA4335 78% 100%);
-      -webkit-mask: radial-gradient(circle at center, transparent 0 46%, #000 47% 66%, transparent 67%);
-              mask: radial-gradient(circle at center, transparent 0 46%, #000 47% 66%, transparent 67%);
-      transform: rotate(20deg);
-    }
-
-    .google-g::after {
-      background: #f5f5f5;
-      -webkit-mask: radial-gradient(circle at center, transparent 0 56%, #000 57% 100%);
-              mask: radial-gradient(circle at center, transparent 0 56%, #000 57% 100%);
-      transform: translate(28px, 0);
-    }
-
-    .tap-text {
-      position: relative;
-      z-index: 1;
-      margin-top: 10px;
-      text-align: center;
-      color: #111;
-      font-family: "Segoe Print", "Bradley Hand", cursive;
-      font-weight: 700;
-      font-size: clamp(20px, 2vw, 32px);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-style: italic;
-    }
-
-    .tap-text .word1 {
-      font-family: "Segoe Print", "Bradley Hand", cursive;
-      letter-spacing: 0.08em;
-    }
-
-    .tap-text .word2 {
-      display: inline-block;
-      margin-left: 6px;
-    }
-
-    .nfc-scene {
-      position: relative;
-      z-index: 1;
-      width: min(510px, 82%);
-      height: 210px;
-      margin: 12px auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nfc-ring {
-      position: absolute;
-      width: 210px;
-      height: 210px;
-      border: 5px solid #111;
-      border-radius: 50%;
-      left: 50%;
-      transform: translateX(-120%);
-      display: grid;
-      place-items: center;
-    }
-
-    .nfc-ring::before,
-    .nfc-ring::after {
-      content: "";
-      position: absolute;
-      border: 4px solid #111;
-      border-color: #111 transparent transparent transparent;
-      border-radius: 50%;
-    }
-
-    .nfc-ring::before {
-      width: 168px; height: 168px;
-      transform: rotate(22deg);
-    }
-
-    .nfc-ring::after {
-      width: 122px; height: 122px;
-      transform: rotate(-18deg);
-    }
-
-    .wave {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 13px;
-      height: 160px;
-      transform: translate(-50%, -50%);
-      border-radius: 999px;
-    }
-
-    .wave::before,
-    .wave::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 999px;
-      border: 4px solid #111;
-      border-color: rgba(17,17,17,0.95) transparent transparent transparent;
-      transform: rotate(0deg);
-    }
-
-    .wave::before {
-      width: 120px;
-      height: 120px;
-      left: -54px;
-      top: 20px;
-    }
-
-    .wave::after {
-      width: 84px;
-      height: 84px;
-      left: -36px;
-      top: 36px;
-    }
-
-    .phone-illustration {
-      position: absolute;
-      right: 19%;
-      bottom: 18px;
-      width: 135px;
-      height: 180px;
-      border: 5px solid #111;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      transform: rotate(12deg);
-      box-shadow: inset 0 0 0 2px rgba(17,17,17,0.08);
-    }
-
-    .phone-illustration::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 16px;
-      transform: translateX(-50%);
-      width: 16px;
-      height: 6px;
-      background: #111;
-      border-radius: 3px;
-    }
-
-    .phone-illustration::after {
-      content: "";
-      position: absolute;
-      inset: 26px 14px 12px;
-      border-radius: 10px;
-      background: linear-gradient(180deg, rgba(17,17,17,0.04), rgba(17,17,17,0.08));
-    }
-
-    .phone-illustration .nfc {
-      position: absolute;
-      right: -16px;
-      top: 54px;
-      color: #111;
-      font-family: Arial, sans-serif;
-      font-weight: 800;
-      font-size: 26px;
-      letter-spacing: -0.04em;
-      transform: rotate(-8deg);
-    }
-
-    .hand {
-      position: absolute;
-      right: 4%;
-      bottom: 0;
-      width: 186px;
-      height: 132px;
-      border: 5px solid #111;
-      border-color: transparent transparent #111 transparent;
-      border-radius: 55% 45% 60% 40% / 80% 80% 20% 20%;
-      transform: rotate(22deg);
-      opacity: 0.95;
-    }
-
-    .hand::before {
-      content: "";
-      position: absolute;
-      width: 72px;
-      height: 40px;
-      border: 5px solid #111;
-      border-top: none;
-      border-radius: 0 0 25px 25px;
-      right: 10px;
-      bottom: 34px;
-      transform: rotate(8deg);
-    }
-
-    .hand::after {
-      content: "";
-      position: absolute;
-      width: 76px;
-      height: 32px;
-      border: 5px solid #111;
-      border-left: none;
-      border-radius: 0 30px 22px 0;
-      right: -12px;
-      bottom: 14px;
-      transform: rotate(14deg);
-    }
-
     .toast {
       position: fixed;
       left: 50%;
@@ -695,16 +380,6 @@
     .toast.on {
       opacity: 1;
       transform: translate(-50%, 0);
-    }
-
-    @media (max-width: 600px) {
-      .review-card { padding-left: 18px; padding-right: 18px; }
-      .headline { max-width: 430px; }
-      .google-box { width: min(290px, 80%); }
-      .nfc-scene { width: min(400px, 100%); }
-      .nfc-ring { transform: translateX(-110%); }
-      .phone-illustration { right: 15%; }
-      .hand { right: 0; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -746,10 +421,10 @@
 
     <div class="quick">
       <a href="mailto:aldrichkyle879@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M20 18H4V8.6l8 5 8-5V18z"/><path fill="#FBBC05" d="M20 6H4l8 5z"/><path fill="#34A853" d="M4 6v12l8-7z"/><path fill="#4285F4" d="M20 18V6l-8 5z"/></svg>
+        <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M20 18H4V8.6l8 5 8-5V18z"/><path fill="#FBBC05" d="M20 6H4l8 5z"/><path fill="#34A853" d="M4 6v12l8-7z"/><path fill="#4285F4" d="M20 18V6l-8 5z[...]
       </a>
       <a href="https://github.com/kaiiiiii0292" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="#111"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.17-3.37-1.17-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.56 1.02 1.56 1.02.9 1.55 2.38 1.1 2.96.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.02-2.68-.1-.25-.44-1.29.1-2.69 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.8c.85 0 1.7.11 2.5.33 1.91-1.29 2.74-1.02 2.74-1.02.54 1.4.2 2.44.1 2.69.63.7 1.02 1.59 1.02 2.68 0 3.84-2.35 4.68-4.58 4.94.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#111"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.17-3.37-1.17-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.56 [...] 
       </a>
       <a href="https://www.instagram.com/not__kaii_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#f58529"/><stop offset=".5" stop-color="#dd2a7b"/><stop offset="1" stop-color="#8134af"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="url(#ig)" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#ig)" stroke-width="1.8"/><circle cx="17.4" cy="6.7" r="1.1" fill="#dd2a7b"/></svg>
@@ -763,7 +438,7 @@
       </button>
 
       <a class="link" href="https://www.facebook.com/profile.php?id=61585444767869" target="_blank" rel="noopener noreferrer">
-        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path fill="#fff" d="M13.4 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.3-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.1 0-3.5 1.3-3.5 3.6v2.1H8.3V14h2.3v7h2.8Z"/></svg></span>
+        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path fill="#fff" d="M13.4 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.3-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.[...]
         <span class="label">Facebook</span>
         <span class="chev">›</span>
       </a>
@@ -773,38 +448,15 @@
         <span class="chev">›</span>
       </a>
       <a class="link" href="https://www.tiktok.com/@notkai_8" target="_blank" rel="noopener noreferrer">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#111"/><path fill="#fff" d="M14.3 7.2c.7.8 1.7 1.3 2.8 1.4v2.1a5.6 5.6 0 0 1-2.8-.8v4.6a4.5 4.5 0 1 1-4.5-4.5c.3 0 .6.1.9.1v2.1a2.4 2.4 0 1 0 1.5 2.3V7.2h2.1Z"/></svg></span>
+        <span class="ico"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#111"/><path fill="#fff" d="M14.3 7.2c.7.8 1.7 1.3 2.8 1.4v2.1a5.6 5.6 0 0 1-2.8-.8v4.6a4.5 4.5 0 1 1-4.5-4[...]
         <span class="label">TikTok</span>
         <span class="chev">›</span>
       </a>
       <a class="link" href="https://github.com/kaiiiiii0292" target="_blank" rel="noopener noreferrer">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#111"/><path fill="#fff" d="M12 6.2a5.8 5.8 0 0 0-1.83 11.3c.29.05.4-.12.4-.28v-1c-1.61.35-1.95-.68-1.95-.68-.27-.68-.66-.86-.66-.86-.54-.37.04-.36.04-.36.6.04.92.62.92.62.53 1 .1 1.06.1 1.06-.58.08-1.18.2-1.18.2-.5.31-.92.9-.92 1.86v2.9c0 .16.12.33.4.28A5.8 5.8 0 0 0 12 6.2Z"/></svg></span>
+        <span class="ico"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#111"/><path fill="#fff" d="M12 6.2a5.8 5.8 0 0 0-1.83 11.3c.29.05.4-.12.4-.28v-1c-1.61.35-1.95-.68-1.95-.6[...]
         <span class="label">GitHub</span>
         <span class="chev">›</span>
       </a>
-    </div>
-
-    <div class="review-stage" aria-label="Google review prompt">
-      <div class="review-card">
-        <div class="stars" aria-hidden="true">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-
-        <div class="headline">We Would Appreciate<br>Your Google Review!</div>
-
-        <div class="google-box" aria-hidden="true">
-          <div class="google-g"></div>
-        </div>
-
-        <div class="tap-text"><span class="word1">Tap Your Phone</span></div>
-
-        <div class="nfc-scene" aria-hidden="true">
-          <div class="nfc-ring"></div>
-          <div class="wave"></div>
-          <div class="phone-illustration"><span class="nfc">NFC</span></div>
-          <div class="hand"></div>
-        </div>
-      </div>
     </div>
   </main>
 
